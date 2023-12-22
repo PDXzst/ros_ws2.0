@@ -1,0 +1,9 @@
+<launch>
+    <!-- uwb ros 驱动 -->
+    <node pkg="imu_single_uwb" type="linktrack" name="linktrack0" output="screen">
+        <param name="port_name" value="/dev/ttyCH343USB0" />
+        <param name="baud_rate" value="921600" />
+    </node>
+    <!-- moving_filer 启动 -->
+    <node pkg = "moving_filer" type = "moving_filer" name = "filer_node"/>
+</launch>
